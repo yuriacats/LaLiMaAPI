@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "netlify-lambda serve src/api netlify-stady",
+    "build": "netlify-lambda build src/api netlify-stady"
   },
   "repository": {
     "type": "git",
@@ -18,9 +19,5 @@
   "homepage": "https://github.com/yuriacats/LaLiMaAPI#readme",
   "dependencies": {
     "netlify-lambda": "^2.0.1"
-  },
-  "scripts": {
-    "dev": "netlify-lambda serve src/api netlify-stady",
-    "build": "netlify-lambda build src/api netlify-stady"
   }
 }
