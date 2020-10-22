@@ -1,0 +1,26 @@
+{
+  "name": "netlify-stady",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuriacats/LaLiMaAPI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuriacats/LaLiMaAPI/issues"
+  },
+  "homepage": "https://github.com/yuriacats/LaLiMaAPI#readme",
+  "dependencies": {
+    "netlify-lambda": "^2.0.1"
+  },
+  "scripts": {
+    "dev": "netlify-lambda serve src/api netlify-stady",
+    "build": "netlify-lambda build src/api netlify-stady"
+  }
+}
