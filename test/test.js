@@ -1,5 +1,6 @@
 const assert = require('assert');
-const target = require('../src/api/Chat')
+const hello = require('../src/api/hello');
+const chat = require('../src/api/chat');
 
 describe('Array',()=>{
     describe('#indexOf()',() =>{
@@ -8,6 +9,17 @@ describe('Array',()=>{
         })
         it('テストコード2個目のテスト',() => {
             assert.equal([1,2,3,].indexOf(2),1)
+        })
+        it('Hello.jsがきちんと動いているかのテスト',()=>{
+            hello.handler( null ,context,(error,result) => {
+                assert.equal(result.body,"Hello World");
+                assert.equal(result.statusCode,200);
+            })
+        })
+        it('Chat.jsのStatus確認',()=>{
+            chat.handler( null ,context,(error,result) => {
+                assert.equal(result.statusCode,200);
+            })
         })
     })
 })
