@@ -6,3 +6,11 @@ LaLiMaのAPIで提供する機能を作ったものです。
 ` npm run dev` #このコマンドを起動することで`localhost:9000/[APIName]`にAPIサーバーが立ちます。  
 [APIName]は src/app 以下のjsファイルの名前が対応しています。
 
+### できること
+`localhost:9000/chat` では、  
+```
+{id:0
+msg:Rimaちゃんのメンヘラメッセージ}
+```
+という形でランダムにメッセージが帰ってきます。
+
