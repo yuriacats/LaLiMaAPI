@@ -18,7 +18,9 @@ describe('Array',()=>{
         })
         it('Chat.jsのStatus確認',()=>{
             chat.handler( null ,context,(error,result) => {
+                resultObj=JSON.parse(result.body);
                 assert.equal(result.statusCode,200);
+                assert.equal(resultObj.id,0);
             })
         })
     })
