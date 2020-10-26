@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "netlify-lambda serve src/api netlify-stady",
     "build": "netlify-lambda build src/api netlify-stady"
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/yuriacats/LaLiMaAPI#readme",
   "dependencies": {
+    "dayjs": "^1.9.4",
     "netlify-lambda": "^2.0.1"
   }
 }

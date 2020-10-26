@@ -1,6 +1,6 @@
-const assert = require('assert');
-const hello = require('../src/api/hello');
-const chat = require('../src/api/chat');
+import hello from "../src/api/hello" ;
+// import chat from "../src/api/chat";
+import 'chai/register-assert';
 
 describe('Array',()=>{
     describe('#indexOf()',() =>{
@@ -11,17 +11,17 @@ describe('Array',()=>{
             assert.equal([1,2,3,].indexOf(2),1)
         })
         it('Hello.jsがきちんと動いているかのテスト',()=>{
-            hello.handler( null ,context,(error,result) => {
+            hello.handler(　(error,result)  => {
                 assert.equal(result.body,"Hello World");
                 assert.equal(result.statusCode,200);
             })
         })
-        it('Chat.jsのStatus確認',()=>{
-            chat.handler( null ,context,(error,result) => {
-                resultObj=JSON.parse(result.body);
-                assert.equal(result.statusCode,200);
-                assert.equal(resultObj.id,0);
-            })
-        })
+        // it('Chat.jsのStatus確認',()=>{
+        //     chat.handler( null ,context,(error,result) => {
+        //         let resultObj=JSON.parse(result.body);
+        //         assert.equal(result.statusCode,200);
+        //         assert.equal(resultObj.id,0);
+        //     })
+        // })
     })
 })
